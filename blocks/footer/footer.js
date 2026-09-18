@@ -17,12 +17,14 @@ function socialNetwork(href) {
 
 /**
  * loads and decorates the footer.
- * Metadata-independent dual-fetch: /content first (localhost), then root (DA/EDS prod).
+ * Metadata-independent dual-fetch: the site-root path (/footer.plain.html)
+ * resolves on BOTH aem up (localhost) and DA/EDS production, so it is tried
+ * first to avoid a console 404; /content is a legacy fallback.
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  let resp = await fetch('/content/footer.plain.html');
-  if (!resp.ok) resp = await fetch('/footer.plain.html');
+  let resp = await fetch('/footer.plain.html');
+  if (!resp.ok) resp = await fetch('/content/footer.plain.html');
   block.textContent = '';
   if (!resp.ok) return;
 

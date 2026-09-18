@@ -19,12 +19,13 @@ function prependIcon(el, svg) {
 }
 
 /**
- * Fetch the nav fragment. Metadata-independent dual-fetch:
- * /content first (localhost / aem up), then root (DA/EDS production).
+ * Fetch the nav fragment. Metadata-independent dual-fetch: the site-root path
+ * (/nav.plain.html) resolves on BOTH aem up (localhost) and DA/EDS production,
+ * so it is tried first to avoid a console 404; /content is a legacy fallback.
  */
 async function fetchNav() {
-  let resp = await fetch('/content/nav.plain.html');
-  if (!resp.ok) resp = await fetch('/nav.plain.html');
+  let resp = await fetch('/nav.plain.html');
+  if (!resp.ok) resp = await fetch('/content/nav.plain.html');
   if (!resp.ok) return null;
   const html = await resp.text();
   const container = document.createElement('div');
