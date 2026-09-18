@@ -58,6 +58,14 @@ export default function decorate(block) {
   });
 
   ul.querySelectorAll('picture > img').forEach((img) => {
+    // Only run EDS optimization on same-origin images. Cross-origin illustrations
+    // (e.g. anz.co.nz DAM) don't honour the ?width/format/optimize params, so
+    // optimizing them yields a broken src — leave those <img> as-is.
+    let sameOrigin = false;
+    try {
+      sameOrigin = new URL(img.src, window.location.href).origin === window.location.origin;
+    } catch { sameOrigin = false; }
+    if (!sameOrigin) return;
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     img.closest('picture').replaceWith(optimizedPic);
     // Scene7 illustrations are cut-outs — keep their transparency.
