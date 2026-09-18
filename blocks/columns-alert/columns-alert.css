@@ -43,7 +43,7 @@
 }
 
 .columns-alert .columns-alert-text-col a {
-  color: var(--anz-brand-blue);   /* #0572e6 */
+  color: var(--link-on-grey-color);   /* AA contrast on the grey alert band */
   font-weight: 400;
   text-decoration: underline;
 }

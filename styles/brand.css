@@ -8,6 +8,7 @@
   --text-color: #424242;
   --link-color: #006bde;
   --link-hover-color: #0057b8;
+  --link-on-grey-color: #0057b8; /* darker blue for AA contrast on grey (#f4f3f4) surfaces */
 
   /* ANZ brand palette */
   --anz-blue: #006bde;
