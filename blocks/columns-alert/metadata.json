@@ -1,0 +1,12 @@
+{
+  "variantName": "columns-alert",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Muted-grey notice band with a small shield/alert icon beside a heading and a paragraph (with inline link).",
+  "contentPattern": "One row, two columns: an icon image and a text column (heading + paragraph).",
+  "usage": "Inline alert / notice callout.",
+  "options": [
+    { "name": "Default", "value": "" }
+  ],
+  "memberVariantIds": ["columns-alert"]
+}

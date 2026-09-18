@@ -1,0 +1,12 @@
+{
+  "variantName": "columns-promo-brand",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Full-bleed brand-blue promotional tile: white text (heading + body + CTA) on one side, a product photo on the other.",
+  "contentPattern": "One row, two columns: a text column (heading, paragraphs, link) and an image column.",
+  "usage": "Brand-colored promotional banner within a page.",
+  "options": [
+    { "name": "Default", "value": "" }
+  ],
+  "memberVariantIds": ["columns-promo-brand"]
+}

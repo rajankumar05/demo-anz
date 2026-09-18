@@ -1,0 +1,104 @@
+/* cards-feature — grey illustrated feature tiles.
+   Each authored row is one card: illustration on top, then heading + copy,
+   with a blue outlined pill CTA pinned to the bottom of the tile.
+   Values extracted from www.anz.co.nz/personal computed styles:
+     tile bg #f4f3f4, radius 8px; content padding 28px; image radius 6px;
+     h3 24px/600/32px #424242; p 16px/400/24px #424242;
+     CTA pill 1px solid #006bde, radius 24px, padding 12px 20px, 16px/600. */
+
+.cards-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Grey tile: equal-height flex column so CTAs align across cards. */
+.cards-feature > ul > li {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--anz-grey); /* #f4f3f4 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Illustration slot (top of the tile) — centered illustration with padding,
+   matching the ANZ feature cards. Empty when no image is authored. */
+.cards-feature .cards-feature-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px 16px;
+  line-height: 0;
+}
+
+.cards-feature .cards-feature-image img {
+  display: block;
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  max-height: 220px;
+  aspect-ratio: 1 / 1; /* reserve space to avoid layout shift (CLS) */
+  object-fit: contain;
+}
+
+/* Text body fills the remaining height so the CTA can pin to the bottom. */
+.cards-feature .cards-feature-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.cards-feature .cards-feature-body > * {
+  margin: 0;
+}
+
+.cards-feature .cards-feature-body h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--text-color); /* #424242 */
+}
+
+.cards-feature .cards-feature-body p {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+/* Pin the trailing CTA to the bottom edge of the tile (equal-height cards). */
+.cards-feature .cards-feature-body > p:last-child {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* Blue outlined pill CTA (matches source: transparent bg, blue border/text). */
+main .cards-feature a.button:any-link {
+  align-self: flex-start;
+  border: 1px solid var(--anz-blue); /* #006bde */
+  background-color: transparent;
+  color: var(--anz-blue);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+main .cards-feature a.button:hover,
+main .cards-feature a.button:focus-visible {
+  border-color: var(--link-hover-color); /* #0057b8 */
+  background-color: rgb(0 107 222 / 6%);
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* Desktop: three equal-width tiles side by side. */
+@media (width >= 900px) {
+  .cards-feature > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}

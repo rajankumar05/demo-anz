@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.anz.co.nz/personal/",
+  "path": "personal",
+  "timestamp": "2026-09-18T07:33:29.138Z",
+  "title": "ANZ Bank New Zealand Ltd | Online Banking | ANZ",
+  "template": "personal",
+  "blocks": [
+    "hero-banner",
+    "cards-quicklinks",
+    "cards-product",
+    "columns-alert",
+    "cards-feature",
+    "columns-promo-brand",
+    "columns-promo-dark"
+  ]
+}

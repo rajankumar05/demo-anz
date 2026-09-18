@@ -1,0 +1,65 @@
+/* columns-alert — icon-beside-text notice band.
+ * The grey full-bleed background is supplied by the section (section.grey);
+ * this block owns only the icon + text layout and spacing.
+ * Values extracted from www.anz.co.nz/personal (.callout-content). */
+
+.columns-alert > div {
+  display: flex;
+  flex-direction: column;   /* mobile: icon stacked above text */
+  gap: 24px;                /* source mobile gap-6 = 24px */
+  align-items: flex-start;
+}
+
+/* Icon column (.callout-image, 64px, object-fit contain on source) */
+.columns-alert .columns-alert-icon-col {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.columns-alert .columns-alert-icon-col :is(img, svg) {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* Text column */
+.columns-alert .columns-alert-text-col {
+  flex: 1;
+}
+
+.columns-alert .columns-alert-text-col h2 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--text-color);
+}
+
+.columns-alert .columns-alert-text-col p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.columns-alert .columns-alert-text-col a {
+  color: var(--anz-brand-blue);   /* #0572e6 */
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.columns-alert .columns-alert-text-col a:hover {
+  color: var(--link-hover-color);
+}
+
+@media (width >= 900px) {
+  .columns-alert > div {
+    flex-direction: row;    /* desktop: icon beside text */
+    gap: 32px;              /* source desktop md:gap-8 = 32px */
+    align-items: flex-start; /* icon top-aligned with heading */
+  }
+
+  .columns-alert .columns-alert-text-col h2 {
+    margin: 0 0 28px;       /* source h2 margin-bottom 28px */
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Light-grey text-only tiles (heading + paragraph + link). No images. Equal-height tiles in a 3-up grid on desktop.",
+  "contentPattern": "Repeating items; each item is a heading, a paragraph, and a link.",
+  "usage": "Product / feature summaries with a 'learn more' link.",
+  "options": [
+    { "name": "Default", "value": "" }
+  ],
+  "memberVariantIds": ["cards-product"]
+}

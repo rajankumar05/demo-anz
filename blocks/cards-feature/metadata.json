@@ -1,0 +1,12 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Light-grey tiles each with a large illustration on top, then heading, paragraph, and an outlined button. Image-led feature cards in a 3-up grid on desktop.",
+  "contentPattern": "Repeating items; each item is an image, a heading, a paragraph, and a link (rendered as a button).",
+  "usage": "Illustrated feature highlights with a call to action.",
+  "options": [
+    { "name": "Default", "value": "" }
+  ],
+  "memberVariantIds": ["cards-feature"]
+}

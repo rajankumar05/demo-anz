@@ -1,0 +1,88 @@
+/* cards-product — grey text-only product tiles.
+   Values extracted from ANZ .navigation-card computed styles.
+   Decorated DOM: .cards-product > ul > li > .cards-product-body (h3 + p + p>a). */
+
+.cards-product > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.cards-product > ul > li {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--anz-grey); /* #f4f3f4 */
+  border-radius: 8px;
+}
+
+/* tile inner content */
+.cards-product .cards-product-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px;
+}
+
+.cards-product .cards-product-body > * {
+  margin: 0;
+}
+
+.cards-product .cards-product-body h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  color: var(--text-color); /* #424242 */
+}
+
+.cards-product .cards-product-body p {
+  font-size: var(--body-font-size-s); /* 16px */
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+/* gap between heading and body copy */
+.cards-product .cards-product-body > p {
+  margin-top: 20px;
+}
+
+/* pin the link paragraph toward the bottom of the equal-height tile */
+.cards-product .cards-product-body > p:last-child {
+  margin-top: auto;
+}
+
+/* blue "learn more" link with trailing chevron/arrow */
+.cards-product .cards-product-body a {
+  color: var(--link-color); /* #006bde */
+  font-size: var(--body-font-size-s); /* 16px */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cards-product .cards-product-body a::after {
+  content: "\2197"; /* ↗ external-link style arrow */
+  margin-left: 8px;
+  font-size: 16px;
+  white-space: nowrap;
+  color: var(--link-color);
+}
+
+.cards-product .cards-product-body a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.cards-product .cards-product-body a:hover::after {
+  color: var(--link-hover-color);
+}
+
+@media (width >= 900px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}

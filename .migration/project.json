@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "demo-anz": {
+      "previewOrg": "rajankumar05",
+      "previewSite": "demo-anz",
+      "contentHostUrl": "https://content.da.live/rajankumar05/demo-anz/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

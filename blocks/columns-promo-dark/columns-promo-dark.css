@@ -1,0 +1,99 @@
+/* columns-promo-dark — dark navy promo tile: phone photo + white text + outline CTA.
+ * Values extracted from source (#1d164c tile, radius 8px, h2 28/32, p 16/24). */
+
+.columns-promo-dark {
+  background-color: var(--anz-dark-navy);
+  border-radius: 8px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* mobile-first: stack image above text */
+.columns-promo-dark > div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 24px;
+}
+
+.columns-promo-dark .columns-promo-dark-img-col {
+  order: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.columns-promo-dark .columns-promo-dark-img-col picture {
+  display: block;
+}
+
+.columns-promo-dark .columns-promo-dark-img-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.columns-promo-dark .columns-promo-dark-text-col {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columns-promo-dark .columns-promo-dark-text-col > * {
+  margin: 0;
+}
+
+.columns-promo-dark h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.columns-promo-dark p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* CTA — white outline pill on navy */
+main .columns-promo-dark a.button:any-link {
+  border: 1px solid #fff;
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  background-color: transparent;
+  color: #fff;
+}
+
+main .columns-promo-dark a.button:hover,
+main .columns-promo-dark a.button:focus-visible {
+  background-color: rgb(255 255 255 / 12%);
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .columns-promo-dark > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .columns-promo-dark .columns-promo-dark-img-col {
+    flex: 1 1 50%;
+    width: auto;
+  }
+
+  .columns-promo-dark .columns-promo-dark-text-col {
+    flex: 1 1 50%;
+    padding-right: 30px;
+  }
+
+  .columns-promo-dark h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

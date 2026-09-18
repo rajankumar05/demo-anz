@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "personal",
+      "urls": [
+        "https://www.anz.co.nz/personal/"
+      ],
+      "representativeUrl": "https://www.anz.co.nz/personal/",
+      "description": "ANZ NZ Personal banking homepage",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment"
+          ]
+        },
+        {
+          "name": "cards-quicklinks",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_219570146"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_855547714"
+          ]
+        },
+        {
+          "name": "columns-alert",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_c"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-threecolumncontainer"
+          ]
+        },
+        {
+          "name": "columns-promo-brand",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-onecolumncontainer_867074127"
+          ]
+        },
+        {
+          "name": "columns-promo-dark",
+          "instances": [
+            "#personal-jcr-content-root-responsivegrid-onecolumncontainer_399269547"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero - Moving to New Zealand",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Quick links strip",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_219570146"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-quicklinks"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Bank accounts - product summary",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_855547714"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_855547714"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Scams alert callout",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-experiencefragment_c"
+          ],
+          "style": "grey",
+          "blocks": [
+            "columns-alert"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Financial wellbeing - heading",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-columncontainer_1514060277"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#personal-jcr-content-root-responsivegrid-columncontainer_1514060277"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Financial wellbeing - three feature cards",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-threecolumncontainer"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Personalise ANZ Visa Debit (MyPhoto) promo",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-onecolumncontainer_867074127"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-promo-brand"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "How we make banking easier promo",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-onecolumncontainer_399269547"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-promo-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Important information (disclaimer)",
+          "selector": [
+            "#personal-jcr-content-root-responsivegrid-columncontainer_copy"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#personal-jcr-content-root-responsivegrid-columncontainer_copy"
+          ]
+        }
+      ]
+    }
+  ]
+}

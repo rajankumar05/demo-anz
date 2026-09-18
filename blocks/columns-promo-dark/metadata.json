@@ -1,0 +1,12 @@
+{
+  "variantName": "columns-promo-dark",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Full-bleed dark-navy promotional tile: a phone/app photo on one side, white text (heading + body + CTA button) on the other.",
+  "contentPattern": "One row, two columns: an image column and a text column (heading, paragraphs, link).",
+  "usage": "Dark promotional banner within a page.",
+  "options": [
+    { "name": "Default", "value": "" }
+  ],
+  "memberVariantIds": ["columns-promo-dark"]
+}

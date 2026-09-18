@@ -1,0 +1,13 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Full-bleed solid brand-blue intro banner. A text panel (heading + short paragraph + single CTA button) sits on one side; a decorative illustration on the other. Stacks vertically on mobile.",
+  "contentPattern": "One image cell (illustration) plus heading, paragraph, and one link (CTA).",
+  "usage": "Primary page intro / landing banner.",
+  "options": [
+    { "name": "Default", "value": "" },
+    { "name": "Reverse", "value": "reverse" }
+  ],
+  "memberVariantIds": ["hero-banner"]
+}

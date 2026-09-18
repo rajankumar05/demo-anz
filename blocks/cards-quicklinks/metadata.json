@@ -1,0 +1,12 @@
+{
+  "variantName": "cards-quicklinks",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Horizontal strip of small line-icon-over-label links, separated by vertical dividers on desktop. No tiles, no descriptive text.",
+  "contentPattern": "Repeating items; each item is an icon (image) plus a short link label.",
+  "usage": "Quick-links / shortcut navigation row beneath a hero.",
+  "options": [
+    { "name": "Default", "value": "" }
+  ],
+  "memberVariantIds": ["cards-quicklinks"]
+}

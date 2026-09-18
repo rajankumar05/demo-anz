@@ -1,0 +1,155 @@
+/* hero-banner — full-bleed ANZ-blue intro band with a white content card
+   holding heading + paragraph + pill CTA, and an illustration alongside.
+   Values extracted from www.anz.co.nz/personal computed styles. */
+
+/* Full-bleed blue band: paint the section wrapper edge-to-edge and drop the
+   section's centred max-width so the colour reaches the viewport edges. */
+.hero-banner-container.section {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-banner-container .hero-banner-wrapper {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--anz-brand-blue); /* #0572e6 */
+}
+
+/* The block itself is the centred content lane inside the blue band. */
+.hero-banner {
+  box-sizing: border-box;
+  max-width: var(--content-max-width); /* 1200px */
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* White content card */
+.hero-banner .hero-banner-content {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 40px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.hero-banner .hero-banner-content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-banner .hero-banner-content > div > * {
+  margin: 0;
+}
+
+.hero-banner .hero-banner-content h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  color: var(--text-color); /* #424242 */
+}
+
+.hero-banner .hero-banner-content p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.35;
+  color: var(--text-color);
+}
+
+/* CTA row + blue pill */
+.hero-banner .hero-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+}
+
+main .hero-banner a.button:any-link {
+  border-color: var(--anz-blue); /* #006bde */
+  background-color: var(--anz-blue);
+  color: #fff;
+  font-size: 16px;
+}
+
+main .hero-banner a.button:hover,
+main .hero-banner a.button:focus-visible {
+  border-color: var(--link-hover-color);
+  background-color: var(--link-hover-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Illustration */
+.hero-banner .hero-banner-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-banner .hero-banner-media picture,
+.hero-banner .hero-banner-media img {
+  display: block;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Desktop: card left, illustration right, both vertically centred in the band */
+@media (width >= 900px) {
+  .hero-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 72px 32px;
+  }
+
+  .hero-banner .hero-banner-content {
+    width: auto;
+    flex: 0 1 496px;
+  }
+
+  .hero-banner .hero-banner-content h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .hero-banner .hero-banner-content p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .hero-banner .hero-banner-media {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 480px;
+    justify-content: flex-end;
+  }
+
+  .hero-banner .hero-banner-media picture,
+  .hero-banner .hero-banner-media img {
+    width: 480px;
+    max-width: 100%;
+  }
+
+  /* reverse option: illustration first, card second */
+  .hero-banner.hero-banner-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .hero-banner.hero-banner-reverse .hero-banner-media {
+    justify-content: flex-start;
+  }
+}

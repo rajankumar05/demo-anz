@@ -1,0 +1,83 @@
+/* cards-quicklinks — icon-over-label link strip.
+   Values extracted from source: anz.co.nz/personal quick-links strip.
+   Icon 52px blue line-icon, blue label #006bde 16px/400, 1px #e4e4e4 dividers. */
+
+.cards-quicklinks > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+}
+
+.cards-quicklinks > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px 17px;
+}
+
+/* icon — small blue line icon, colour baked into the source SVG */
+.cards-quicklinks .cards-quicklinks-icon {
+  line-height: 0;
+}
+
+.cards-quicklinks .cards-quicklinks-icon img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* label — blue link, no underline, centered */
+.cards-quicklinks .cards-quicklinks-label {
+  font-size: 16px;
+}
+
+.cards-quicklinks .cards-quicklinks-label p {
+  margin: 0;
+  line-height: 24px;
+}
+
+.cards-quicklinks .cards-quicklinks-label a:any-link {
+  color: var(--link-color);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* thin vertical dividers between columns (source: cell ::after, 1px #e4e4e4) */
+.cards-quicklinks > ul > li:not(:nth-child(2n)) {
+  border-right: 1px solid #e4e4e4;
+}
+
+/* 4-across on small tablets */
+@media (width >= 600px) {
+  .cards-quicklinks > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards-quicklinks > ul > li:not(:nth-child(2n)) {
+    border-right: 1px solid #e4e4e4;
+  }
+
+  .cards-quicklinks > ul > li:nth-child(4n) {
+    border-right: 0;
+  }
+}
+
+/* 6-across on desktop */
+@media (width >= 900px) {
+  .cards-quicklinks > ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cards-quicklinks > ul > li {
+    border-right: 1px solid #e4e4e4;
+  }
+
+  .cards-quicklinks > ul > li:last-child {
+    border-right: 0;
+  }
+}

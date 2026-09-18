@@ -1,0 +1,103 @@
+/* columns-promo-brand — brand-blue promo tile: white text + card photo.
+ * Values extracted from https://www.anz.co.nz/personal/ (.promotion-tile). */
+
+.columns-promo-brand {
+  background-color: var(--anz-brand-blue); /* #0572e6 */
+  border-radius: 8px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* single row: text column + image column, stacked on mobile (text first) */
+.columns-promo-brand > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+/* --- text column --- */
+.columns-promo-brand .columns-promo-brand-text-col {
+  order: 0;
+  padding: 30px;
+}
+
+.columns-promo-brand .columns-promo-brand-text-col > * {
+  margin: 0 0 16px;
+}
+
+.columns-promo-brand .columns-promo-brand-text-col > *:last-child {
+  margin-bottom: 0;
+}
+
+.columns-promo-brand h2 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+}
+
+.columns-promo-brand p {
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* --- CTA: white-outline pill on the blue --- */
+main .columns-promo-brand a.button:any-link {
+  margin-top: 4px;
+  border: 1px solid #fff;
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main .columns-promo-brand a.button:hover,
+main .columns-promo-brand a.button:focus-visible {
+  background-color: rgb(255 255 255 / 12%);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- image column --- */
+.columns-promo-brand .columns-promo-brand-img-col {
+  order: 1;
+  align-self: stretch;
+  padding: 0 17px 17px;
+  line-height: 0;
+}
+
+.columns-promo-brand .columns-promo-brand-img-col picture {
+  display: block;
+}
+
+.columns-promo-brand .columns-promo-brand-img-col img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (width >= 900px) {
+  .columns-promo-brand > div {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .columns-promo-brand .columns-promo-brand-text-col {
+    flex: 1 1 50%;
+    padding: 30px 0 30px 30px;
+  }
+
+  .columns-promo-brand .columns-promo-brand-img-col {
+    flex: 1 1 50%;
+    padding: 17px;
+  }
+}
