@@ -1,0 +1,25 @@
+# ANZ Bank New Zealand — Personal
+
+> ANZ offers a wide range of personal banking and financial services in New Zealand, including bank accounts, credit cards, home loans, personal loans, insurance, KiwiSaver, investments and foreign exchange.
+
+## Personal banking
+
+- [Bank accounts](https://www.anz.co.nz/personal/accounts/): Everyday accounts, savings accounts and term deposits.
+- [Credit cards](https://www.anz.co.nz/personal/credit-cards/): Compare ANZ credit cards.
+- [Home loans](https://www.anz.co.nz/personal/home-loans-mortgages/): Mortgages and home lending, including paying off your loan faster.
+- [Personal loans](https://www.anz.co.nz/personal/loans/): Borrowing options for personal needs.
+- [Insurance](https://www.anz.co.nz/personal/insurance/): Personal insurance products.
+- [KiwiSaver](https://www.anz.co.nz/personal/kiwisaver/): Retirement saving with ANZ KiwiSaver.
+- [Investments](https://www.anz.co.nz/personal/investments/): Investment products and services.
+- [Foreign exchange](https://www.anz.co.nz/personal/fx-international/): FX rates, calculators and international money transfers.
+
+## Financial wellbeing
+
+- [Financial wellbeing](https://www.anz.co.nz/banking-with-anz/financial-wellbeing/): Tools, tips and coaching to help manage money.
+- [Scams and fraud guide](https://www.anz.co.nz/banking-with-anz/banking-safely/): How to recognise and avoid scams.
+
+## Help
+
+- [Contact us](https://www.anz.co.nz/contact-us/)
+- [Find an ATM or branch](https://www.anz.co.nz/locations/)
+- [Ways to bank](https://www.anz.co.nz/banking-with-anz/ways-to-bank/)
